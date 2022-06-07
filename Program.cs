@@ -8,8 +8,56 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+
+            SmackTalkingPlayer wes = new SmackTalkingPlayer()
+            {
+                Name = "Wes",
+                Taunt = "YOU SUCK BUD"
+            };
+
+            SmackTalkingPlayer tory = new SmackTalkingPlayer()
+            {
+                Name = "Tory",
+                Taunt = "GOTCHA!!!!!!!!"
+            };
+
+            HumanPlayer Andrew = new HumanPlayer()
+            {
+                Name = "Andrew"
+            };
+
+            CreativeSmackTalkingPlayer Jack = new CreativeSmackTalkingPlayer()
+            {
+                Name = "Jack"
+            };
+            SoreLoserPlayer Lucy = new SoreLoserPlayer()
+            {
+                Name = "Lucy"
+            };
+            UpperHalfPlayer Tony = new UpperHalfPlayer()
+            {
+                Name = "Tony"
+            };
+
+            SoreLoserUpperHalfPlayer Vicky = new SoreLoserUpperHalfPlayer()
+            {
+                Name = "Vicky"
+            };
+
+
+
             Player player1 = new Player();
             player1.Name = "Bob";
+
+
+            Vicky.Play(player1);
+            Tony.Play(player1);
+            Lucy.Play(player1);
+            Jack.Play(wes);
+            Andrew.Play(player1);
+            wes.Play(player1);
+            tory.Play(player1);
+            tory.Play(wes);
 
             Player player2 = new Player();
             player2.Name = "Sue";
